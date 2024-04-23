@@ -3,12 +3,13 @@ import mongoose from "mongoose";
 
 // Create A ToDo
 const createTodo = async (req, res) => {
-    const { title, description, dueDate } = req.body;
+    const { title, description, dueDate, completed } = req.body;
     try {
         const todo = await ToDoItem.create({
             title,
             description,
-            dueDate
+            dueDate,
+            completed
         });
         return res.status(200).json(todo);
     } catch (error) {
