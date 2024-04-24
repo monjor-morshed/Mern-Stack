@@ -79,11 +79,15 @@ const Home = () => {
     <div>
       <div className="grid grid-cols-2 gap-3">
         <div className="col-span-1">
+        <h3 className="ml-10 mt-6 p-3 text-4xl font-bold dark:gray-900">ToDO Lists</h3>
+          
           {todos &&
             todos.map((todo) => (
+              
               <div
                 key={todo._id}
                 className="ml-10 mt-6 max-w-sm p-3 bg-white border border-gray-200 rounded-md shadow-md"
+
               >
                 <Link to={`/show/${todo._id}`}>
                   <h5 className="font-bold tracking-tight text-primary">
@@ -112,7 +116,7 @@ const Home = () => {
         <div className="col-span-1">
 
           <form onSubmit={handleNewTodoSubmit} className="p-3">
-            <h3 className="text-lg font-bold dark:gray-900">Create New ToDo</h3>
+            <h3 className="text-2xl font-bold dark:gray-900">Create New ToDo</h3>
             <input
               type="text"
               placeholder="Todo Title"

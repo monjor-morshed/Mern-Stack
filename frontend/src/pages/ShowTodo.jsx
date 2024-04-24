@@ -72,7 +72,7 @@ const ShowTodo = () => {
       <div className="ml-10 mt-6 max-w-sm p-3 bg-white border border-gray-200 rounded-md shadow-md ">
         {editing ? (
           <>
-            <h3 className="text-lg font-bold">Edit ToDo</h3>
+            <h3 className="text-2xl font-bold">Edit ToDo</h3>
             <br />
             <input
               type="text"
