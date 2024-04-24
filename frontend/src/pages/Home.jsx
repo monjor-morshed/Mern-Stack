@@ -110,23 +110,29 @@ const Home = () => {
             ))}
         </div>
         <div className="col-span-1">
-          <form onSubmit={handleNewTodoSubmit} className="rows-1">
+
+          <form onSubmit={handleNewTodoSubmit} className="p-3">
+            <h3 className="text-lg font-bold dark:gray-900">Create New ToDo</h3>
             <input
               type="text"
               placeholder="Todo Title"
               value={newTodoTitle}
               onChange={(e) => setNewTodoTitle(e.target.value)}
               className="mt-4 mr-2 inline-block px-3 py-2 border border-gray-300 rounded-md"
+              
               required
             />
-            <input
+            <br />
+            <textarea
               type="text"
               placeholder="Todo Description"
               value={newTodoDescription}
               onChange={(e) => setNewTodoDescription(e.target.value)}
               className="mt-4 mr-2 inline-block px-3 py-2 border border-gray-300 rounded-md"
               
+              
             />
+            <br />
             <input
               type="date"
               value={newTodoDueDate}
@@ -134,6 +140,7 @@ const Home = () => {
               className="mt-4 mr-2 inline-block px-3 py-2 border border-gray-300 rounded-md"
               required
             />
+            <br />
             <button
               type="submit"
               className="mt-4 inline-block dark:bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
