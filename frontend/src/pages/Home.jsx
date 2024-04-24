@@ -90,7 +90,8 @@ const Home = () => {
 
               >
                 <Link to={`/show/${todo._id}`}>
-                  <h5 className="font-bold tracking-tight text-primary">
+                  
+                  <h5 className={`font-bold tracking-tight ${todo.completed ? 'text-green-600' : 'text-red-600'}`}>
                     {todo.title}
                   </h5>
                 </Link>
